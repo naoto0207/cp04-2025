@@ -45,16 +45,19 @@
     }
     
     #btnA {
+        color: blue;
         font-size: 20px;
         position:absolute; top:380px; left:2%; width:43%; height:60px; 
     }
     
     #btnB {
+        color: blue;
         font-size: 20px;
         position:absolute; top:380px; left:45%; width:25%; height:60px; 
     }
 
     #btnC {
+        color: blue;
         font-size: 10px;
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
     }
