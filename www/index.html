@@ -227,7 +227,7 @@
         if(active){
           etime = parseInt( (new Date() - startTime)/1000 );
           rest = period - etime;
-          $("#time").html("経過時間： " + etime +"秒");
+          $("#time").html("経過時間： " + rest +"秒");
           $("#remain").html("カップ麺完成まで ： " + rest+"秒");
           analog(rest);
         
