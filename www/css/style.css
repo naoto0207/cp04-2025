@@ -1,6 +1,6 @@
 /**/
     body{
-        background: skyblue;
+        background: whitesmoke;
    }
 
 
@@ -60,14 +60,14 @@
     
     #btnB {
         color: white;
-        background-color: tomato;
+        background-color: blue;
         font-size: 20px;
         position:absolute; top:380px; left:50%; width:20%; height:60px; 
     }
 
     #btnC {
         color: white;
-        background-color: blue;
+        background-color: tomato;
         font-size: 20px;
         position:absolute; top:380px; left:75%; width:20%; height:60px; 
     }
