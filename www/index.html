@@ -208,9 +208,13 @@
 
     // ButtonCがクリックされた時の処理 停止の処理
     function btnCClick(e){
+        // activeがtrue（タイマーが動いている）場合にのみ処理を行う
         if (active) {
-        var timeElapsed = parseInt( (new Date() - startTime)/1000 );
+        // 停止した瞬間の経過時間を計算
+        var timeElapsed = parseInt( (new Date()-startTime)/1000 );
+        // 停止した瞬間の残り時間を計算 
         var remaining = period - timeElapsed;
+        // 残り時間を period に上書き保存（これが再開時の開始時間になる）
         period = remaining; 
         
         active = false; // タイマーを停止
