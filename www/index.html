@@ -38,6 +38,9 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+         $('#btnD').click(function(e) {
+            btnCClick(e);
+        });
         init();
     });
     
@@ -208,7 +211,7 @@
         active = true;
         startTime = new Date();
         period = 60*3;
-    
+    }
  
     // 繰り返し実行する処理
     function timer(){
@@ -243,7 +246,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>  
-      <button id="btnD">Set</button>  
+    <button id="btnD">Set</button>  
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=30 >
 </body>
