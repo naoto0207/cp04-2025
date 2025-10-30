@@ -163,6 +163,7 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled', false);
         
     }
 
@@ -177,13 +178,14 @@
             var audio = new Audio();
             audio.src = "pin.wav";
             audio.play();
-        };        
+        };
     }
     
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
         active = true;
         startTime = new Date();
+        period = 60*5;
         
         
     }
@@ -192,7 +194,6 @@
     function btnBClick(e){
         active = false;
         
-        
     }
 
     // ButtonCがクリックされた時の処理
@@ -200,19 +201,22 @@
         alarm();
         active = false;
         period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
-        $("#time").html("経過時間： 0");
-        $("#remain").html("残り時間： " + period);
-        
+        $("#time").html("経過時間： 0秒");
+        $("#remain").html("残り時間： " + period + "秒");
     }
+    function btnDClick(e){
+        active = true;
+        startTime = new Date();
+        period = 60*3;
     
  
     // 繰り返し実行する処理
     function timer(){
         if(active){
-          etime = parseInt( (new Date() -     startTime)/1000 );
+          etime = parseInt( (new Date() - startTime)/1000 );
           rest = period - etime;
-          $("#time").html("経過時間： " + etime);
-          $("#remain").html("残り時間 ： " + rest);
+          $("#time").html("経過時間： " + etime +"秒");
+          $("#remain").html("残り時間 ： " + rest+"秒");
           analog(rest);
         
            if(rest <= 0){
@@ -220,10 +224,12 @@
             alarm();
 
         }
+
 }
 }
 
   </script>
+  
 </head>
 <body>
     <canvas id="mycanvas" width="200" height="200">Test</canvas>
@@ -237,7 +243,8 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>  
+      <button id="btnD">Set</button>  
     <input type="number" id="minute" value=0 >
-    <input type="number" id="second" value=15 >
+    <input type="number" id="second" value=30 >
 </body>
 </html>

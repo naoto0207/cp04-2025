@@ -52,21 +52,30 @@
 
     
     #btnA {
-        color: green;
-        background-color: yellow;
+        color: white;
+        background-color: black;
         font-size: 20px;
-        position:absolute; top:380px; left:2%; width:43%; height:60px; 
+        position:absolute; top:380px; left:2%; width:20%; height:60px; 
     }
     
     #btnB {
+        color: white;
+        background-color: tomato;
         font-size: 20px;
-        position:absolute; top:380px; left:45%; width:25%; height:60px; 
+        position:absolute; top:380px; left:50%; width:20%; height:60px; 
     }
 
     #btnC {
-
-        font-size: 10px;
-        position:absolute; top:380px; left:70%; width:28%; height:60px; 
+        color: white;
+        background-color: blue;
+        font-size: 20px;
+        position:absolute; top:380px; left:75%; width:20%; height:60px; 
+    }
+     #btnD {
+        color: white;
+        background-color: black;
+        font-size: 20px;
+        position:absolute; top:380px; left:26%; width:20%; height:60px; 
     }
 
     
